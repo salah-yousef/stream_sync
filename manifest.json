@@ -23,7 +23,7 @@
       "background.js"
     ]
   },
-  "content_security_policy":"script-src 'self' https://apis.google.com; object-src 'self'",
+  "content_security_policy": "script-src 'self' https://apis.google.com; object-src 'self'",
   "browser_action": {
     "default_icon": "ct.png",
     "default_popup": "index.html",
