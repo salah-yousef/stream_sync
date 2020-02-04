@@ -2,6 +2,17 @@
     const videoPlayer = window.netflix.appContext.state.playerApp.getAPI().videoPlayer;
     const playerSessionId = videoPlayer.getAllPlayerSessionIds()[0];
     const player = videoPlayer.getVideoPlayerBySessionId(playerSessionId);
-    let currentTime = localStorage.getItem('currentTime');
-    player.seek(currentTime);
+    (async () => {
+        const response = await fetch('http://5e39744aaad222001496292e.mockapi.io/currentTime', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        const myJson = await response.json(); //extract JSON from the http response
+        // do something with myJson
+        console.log(myJson[0].value);
+        let currentTime = myJson[0].value
+        player.seek(currentTime);
+    })();
 })();
