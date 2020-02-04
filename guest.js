@@ -15,5 +15,5 @@
 
     let currentTime = localStorage.getItem('currentTime');
     player.seek(currentTime);
-
+    console.log(currentTime);
 })();
