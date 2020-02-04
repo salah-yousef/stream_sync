@@ -3,7 +3,7 @@
     const playerSessionId = videoPlayer.getAllPlayerSessionIds()[0];
     const player = videoPlayer.getVideoPlayerBySessionId(playerSessionId);
     (async () => {
-        const response = await fetch('http://5e39744aaad222001496292e.mockapi.io/currentTime', {
+        const response = await fetch('https://5e39744aaad222001496292e.mockapi.io/currentTime', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
