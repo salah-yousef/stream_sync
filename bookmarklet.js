@@ -5,7 +5,7 @@
 (function () {
   alert("dfg");
   console.log('bookmarklet starting');
-  console.log(window);
+  console.log(window.netflix);
   let paragraphs = document.getElementsByTagName('p');
   for (let i = 0; i < paragraphs.length; i++) {
     paragraphs[i].innerHTML = 'puppy';
