@@ -26,7 +26,6 @@
   "content_security_policy": "script-src 'self' https://apis.google.com; object-src 'self'",
   "browser_action": {
     "default_icon": "ct.png",
-    "default_popup": "index.html",
-    "default_title": "Generate a maze!"
+    "default_title": "stream together!"
   }
 }
