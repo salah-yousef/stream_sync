@@ -3,11 +3,17 @@
 // http://patreon.com/codingtrain
 
 (function () {
-  alert("dfg");
   console.log('bookmarklet starting');
   console.log(window.netflix);
-  let paragraphs = document.getElementsByTagName('p');
-  for (let i = 0; i < paragraphs.length; i++) {
-    paragraphs[i].innerHTML = 'puppy';
-  }
+
+  const videoPlayer = window.netflix.appContext.state.playerApp.getAPI().videoPlayer;
+
+  // Getting player id
+  const playerSessionId = videoPlayer.getAllPlayerSessionIds()[0];
+
+  const player = videoPlayer.getVideoPlayerBySessionId(playerSessionId);
+
+  let currentTime = localStorage.getItem('currentTime');
+  player.seek(currentTime);
+
 })();

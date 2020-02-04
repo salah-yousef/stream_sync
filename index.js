@@ -13,7 +13,6 @@ function myHostFunction() {
             chrome.tabs.sendMessage(tabs[0].id, 'host');
         });
     }
-
 }
 
 document.getElementById("guest").addEventListener("click", myGuestFunction);
